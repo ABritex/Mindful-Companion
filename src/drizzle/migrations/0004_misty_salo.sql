@@ -1,0 +1,1 @@
+ALTER TABLE "users" ADD COLUMN "has_completed_pre_assessment" text DEFAULT 'false' NOT NULL;

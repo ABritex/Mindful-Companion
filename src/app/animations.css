@@ -1,0 +1,237 @@
+/* Enhanced blob animations with persistent timing */
+@keyframes blob-float-1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translate(-10px, -15px) rotate(2deg) scale(1.05);
+    }
+
+    50% {
+        transform: translate(5px, -10px) rotate(-1deg) scale(0.95);
+    }
+
+    75% {
+        transform: translate(-5px, 5px) rotate(1deg) scale(1.02);
+    }
+}
+
+@keyframes blob-float-2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translate(8px, -12px) rotate(-2deg) scale(0.98);
+    }
+
+    50% {
+        transform: translate(-6px, -8px) rotate(1deg) scale(1.03);
+    }
+
+    75% {
+        transform: translate(4px, 8px) rotate(-1deg) scale(0.97);
+    }
+}
+
+@keyframes blob-float-3 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translate(-12px, -8px) rotate(1deg) scale(1.02);
+    }
+
+    50% {
+        transform: translate(8px, -12px) rotate(-2deg) scale(0.96);
+    }
+
+    75% {
+        transform: translate(-6px, 6px) rotate(2deg) scale(1.04);
+    }
+}
+
+@keyframes blob-float-4 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translate(6px, -10px) rotate(-1deg) scale(1.01);
+    }
+
+    50% {
+        transform: translate(-8px, -6px) rotate(2deg) scale(0.99);
+    }
+
+    75% {
+        transform: translate(4px, 8px) rotate(-1deg) scale(1.02);
+    }
+}
+
+@keyframes blob-float-5 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translate(-8px, -14px) rotate(2deg) scale(0.98);
+    }
+
+    50% {
+        transform: translate(10px, -8px) rotate(-1deg) scale(1.03);
+    }
+
+    75% {
+        transform: translate(-4px, 6px) rotate(1deg) scale(0.99);
+    }
+}
+
+@keyframes particle-float-1 {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(20px);
+        opacity: 0;
+    }
+}
+
+@keyframes particle-float-2 {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(-15px);
+        opacity: 0;
+    }
+}
+
+@keyframes particle-float-3 {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(25px);
+        opacity: 0;
+    }
+}
+
+@keyframes particle-float-4 {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(-10px);
+        opacity: 0;
+    }
+}
+
+/* Animation classes with persistent timing */
+.animate-blob-float-1 {
+    animation: blob-float-1 8s ease-in-out infinite;
+    animation-fill-mode: both;
+}
+
+.animate-blob-float-2 {
+    animation: blob-float-2 8s ease-in-out infinite 2s;
+    animation-fill-mode: both;
+}
+
+.animate-blob-float-3 {
+    animation: blob-float-3 8s ease-in-out infinite 4s;
+    animation-fill-mode: both;
+}
+
+.animate-blob-float-4 {
+    animation: blob-float-4 8s ease-in-out infinite 1s;
+    animation-fill-mode: both;
+}
+
+.animate-blob-float-5 {
+    animation: blob-float-5 8s ease-in-out infinite 3s;
+    animation-fill-mode: both;
+}
+
+.animate-particle-float-1 {
+    animation: particle-float-1 12s infinite linear;
+    animation-fill-mode: both;
+}
+
+.animate-particle-float-2 {
+    animation: particle-float-2 12s infinite linear 3s;
+    animation-fill-mode: both;
+}
+
+.animate-particle-float-3 {
+    animation: particle-float-3 12s infinite linear 6s;
+    animation-fill-mode: both;
+}
+
+.animate-particle-float-4 {
+    animation: particle-float-4 12s infinite linear 9s;
+    animation-fill-mode: both;
+}
+
+/* Ensure animations continue during transitions */
+* {
+    animation-play-state: running !important;
+}
+
+/* Smooth container scaling */
+.auth-container {
+    will-change: transform, scale;
+    transform-origin: center center;
+}

@@ -1,0 +1,79 @@
+/* Typography Utility Classes */
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.font-body {
+    font-family: var(--font-primary);
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+}
+
+/* Heading styles with Century Gothic */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Body text with Helvetica */
+p,
+span,
+div,
+li,
+a {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+}
+
+/* Light weight for subtle text */
+.text-light {
+    font-weight: 300;
+}
+
+/* Regular weight for body text */
+.text-regular {
+    font-weight: 400;
+}
+
+/* Bold weight for emphasis */
+.text-bold {
+    font-weight: 700;
+}

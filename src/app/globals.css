@@ -1,26 +1,137 @@
 @import "tailwindcss";
+@import "./fonts.css";
+@import "./animations.css";
+@import "./typography.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #fef7ff;
+    /* warm white with slight pink tint */
+    --foreground: #1e1b4b;
+    /* deep purple-blue */
+    --primary: #3b82f6;
+    /* vibrant blue */
+    --primary-foreground: #fff;
+    --secondary: #a855f7;
+    /* bright purple */
+    --secondary-foreground: #fff;
+    --accent: #10b981;
+    /* emerald green */
+    --accent-foreground: #fff;
+    --muted: #f1f5f9;
+    /* light slate */
+    --muted-foreground: #475569;
+    /* slate-600 */
+
+    /* Custom brand and glow colors */
+    --brand-blue: #2563eb;
+    --brand-purple: #9333ea;
+    --brand-accent: #f59e0b;
+    --input-glow: #3b82f6;
+    --button-glow: #8b5cf6;
+    --input-button: #2563eb;
+    --auth-bg-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+
+    --button-bg: #1f2937;
+    /* darker gray for contrast */
+    --button-fg: #fff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --font-sans: var(--font-primary);
+    --font-mono: var(--font-mono);
+    --shadow-input:
+        0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+        0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+        0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+    --input-button-blue: var(--input-button);
+    --input-button-background: var(--muted);
+    --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+
+    @keyframes rainbow {
+        0% {
+            background-position: 0%;
+        }
+
+        100% {
+            background-position: 200%;
+        }
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+    --background: #18181b;
+    --foreground: #f4f4f5;
+    --primary: #60a5fa;
+    /* blue-400 */
+    --primary-foreground: #18181b;
+
+    /* --secondary: #27272a; */
+
+    --secondary: #a855f7;
+    /* zinc-800 */
+    --secondary-foreground: #f4f4f5;
+    --accent: #fbbf24;
+    /* amber-400 */
+    --accent-foreground: #18181b;
+    --muted: #27272a;
+    /* zinc-800 */
+    --muted-foreground: #a1a1aa;
+    /* zinc-400 */
+
+    /* Custom brand and glow colors for dark mode */
+    --brand-blue: #60a5fa;
+    --brand-purple: #a5b4fc;
+    --brand-accent: #fbbf24;
+    --input-glow: #2563eb;
+    --button-glow: #6366f1;
+    --input-button: #60a5fa;
+    --button-bg: #fff;
+    /* white for dark mode */
+    --button-fg: #121213;
+    /* black text for dark mode */
+}
+
+body,
+html {
+    transition:
+        background 0.5s cubic-bezier(.4, 1.6, .6, 1),
+        color 0.5s cubic-bezier(.4, 1.6, .6, 1);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-primary);
+}
+
+:root,
+.dark {
+    transition:
+        background 0.5s cubic-bezier(.4, 1.6, .6, 1),
+        color 0.5s cubic-bezier(.4, 1.6, .6, 1),
+        --background 0.5s cubic-bezier(.4, 1.6, .6, 1),
+        --foreground 0.5s cubic-bezier(.4, 1.6, .6, 1),
+        --primary 0.5s cubic-bezier(.4, 1.6, .6, 1),
+        --secondary 0.5s cubic-bezier(.4, 1.6, .6, 1);
+}
+
+.auth-bg {
+    background: var(--auth-bg-gradient);
+    transition: background 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
