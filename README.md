@@ -1,5 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+.ENV
+```
+# Redis
+REDIS_URL=
+REDIS_TOKEN=
+# NEXT_PUBLIC_APP_URL=http://localhost:3000  
+# Database
+DB_PASSWORD=
+DB_USER=
+DB_NAME=mindful-
+DB_HOST=
 
+# OAuth
+OAUTH_REDIRECT_URL_BASE=http://localhost:3000/api/oauth/
+
+# Discord
+DISCORD_CLIENT_ID=
+DISCORD_CLIENT_SECRET=
+
+# GitHub
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+
+# Google Api OAuth
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+
+EMAIL_USER=
+EMAIL_PASS=
+
+SONNET=
+```
 ## Getting Started
 
 First, run the development server:
