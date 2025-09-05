@@ -30,6 +30,9 @@ EMAIL_PASS=
 
 SONNET=
 ```
+
+docker-compose up -d
+
 ## Getting Started
 
 First, run the development server:
